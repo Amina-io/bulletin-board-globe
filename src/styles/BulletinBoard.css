@@ -1,0 +1,264 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+  }
+  
+  .bulletin-modal {
+    background: white;
+    border-radius: 12px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+  }
+  
+  @keyframes modalSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .modal-header {
+    padding: 20px 30px;
+    border-bottom: 2px solid #eee;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+  }
+  
+  .modal-header h2 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .location-info {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+  
+  .context {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 8px;
+    border-radius: 12px;
+  }
+  
+  .country {
+    font-weight: 500;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+  
+  .close-button:hover {
+    opacity: 1;
+  }
+  
+  .bulletin-board {
+    height: 500px;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .cork-background {
+    background: 
+      radial-gradient(circle at 20% 20%, #d4a574 1px, transparent 1px),
+      radial-gradient(circle at 80% 80%, #c49660 1px, transparent 1px),
+      radial-gradient(circle at 40% 60%, #d4a574 0.5px, transparent 0.5px),
+      linear-gradient(45deg, #deb887 25%, transparent 25%),
+      linear-gradient(-45deg, #deb887 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #d2b48c 75%),
+      linear-gradient(-45deg, transparent 75%, #d2b48c 75%);
+    background-size: 
+      100px 100px,
+      100px 100px,
+      50px 50px,
+      20px 20px,
+      20px 20px,
+      20px 20px,
+      20px 20px;
+    background-color: #daa520;
+    height: 100%;
+    position: relative;
+    padding: 20px;
+  }
+  
+  .bulletin-item {
+    position: absolute;
+    width: 220px;
+    min-height: 140px;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 
+      0 4px 8px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .bulletin-item:hover {
+    transform: scale(1.05) !important;
+    z-index: 10;
+  }
+  
+  .bulletin-item::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    z-index: -1;
+  }
+  
+  .thumbtack {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(circle, #ff6b6b, #ee5a5a);
+    border-radius: 50%;
+    box-shadow: 
+      0 2px 4px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    z-index: 5;
+  }
+  
+  .thumbtack::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tape {
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    width: 30px;
+    height: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transform: rotate(-15deg);
+    opacity: 0.8;
+  }
+  
+  .item-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .item-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 8px 0;
+    color: #333;
+    line-height: 1.2;
+  }
+  
+  .item-text {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+    color: #555;
+  }
+  
+  /* Different item type styles */
+  .bulletin-item.notice {
+    font-family: Arial, sans-serif;
+  }
+  
+  .bulletin-item.flyer {
+    border-left: 4px solid #ff6b6b;
+  }
+  
+  .bulletin-item.personal {
+    font-style: italic;
+    border: 2px dashed #666;
+  }
+  
+  .bulletin-item.service {
+    border-radius: 8px;
+  }
+  
+  .bulletin-item.event {
+    background-image: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+  }
+  
+  .bulletin-item.academic {
+    font-family: 'Times New Roman', serif;
+  }
+  
+  .bulletin-item.formal {
+    border: 2px solid #333;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .bulletin-modal {
+      margin: 10px;
+      max-width: calc(100vw - 20px);
+    }
+    
+    .modal-header {
+      padding: 15px 20px;
+    }
+    
+    .bulletin-item {
+      width: 180px;
+      min-height: 120px;
+      padding: 12px;
+    }
+    
+    .item-title {
+      font-size: 14px;
+    }
+    
+    .item-text {
+      font-size: 12px;
+    }
+  }
