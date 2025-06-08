@@ -18,6 +18,17 @@ function latLngToVector3(lat, lng, radius = 2.05) {
   return new THREE.Vector3(x, y, z);
 }
 
+// Helper function to check WebGL support
+function checkWebGLSupport() {
+  try {
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    return !!context;
+  } catch (e) {
+    return false;
+  }
+}
+
 // Loading component
 function Loading() {
   return (
@@ -28,10 +39,19 @@ function Loading() {
 }
 
 // Error fallback component
-function ErrorFallback() {
+function ErrorFallback({ error }) {
+  console.error('Globe Error Details:', error);
+  const hasWebGL = checkWebGLSupport();
+  
   return (
     <div className="loading">
-      ⚠️ Having trouble loading the globe. Please refresh the page!
+      ⚠️ Geographic loading has failed. Please refresh the page!
+      <br />
+      <small style={{ fontSize: '12px', color: '#666', marginTop: '8px', display: 'block' }}>
+        {error?.message || 'WebGL or texture loading error'}
+        <br />
+        WebGL Support: {hasWebGL ? '✓ Available' : '✗ Not Available'}
+      </small>
     </div>
   );
 }
@@ -41,7 +61,15 @@ function EarthWithMarkers({ onLocationClick }) {
   const groupRef = useRef();
   
   // Load earth texture with error handling
-  const earthTexture = useLoader(TextureLoader, 'https://unpkg.com/three-globe/example/img/earth-day.jpg');
+  const earthTexture = useLoader(
+    TextureLoader, 
+    'https://unpkg.com/three-globe/example/img/earth-day.jpg',
+    undefined, // onProgress
+    (error) => {
+      console.error('Failed to load Earth texture:', error);
+      throw new Error(`Texture loading failed: ${error.message}`);
+    }
+  );
   
   useFrame(() => {
     if (groupRef.current) {
@@ -81,20 +109,22 @@ function EarthWithMarkers({ onLocationClick }) {
 class CanvasErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, error: null };
   }
 
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true, error };
   }
 
   componentDidCatch(error, errorInfo) {
     console.error('Canvas Error:', error, errorInfo);
+    console.error('Error Stack:', error.stack);
+    console.error('Component Stack:', errorInfo.componentStack);
   }
 
   render() {
     if (this.state.hasError) {
-      return <ErrorFallback />;
+      return <ErrorFallback error={this.state.error} />;
     }
 
     return this.props.children;
