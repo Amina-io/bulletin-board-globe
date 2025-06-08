@@ -32,14 +32,13 @@ export const locations = [
         }
       ]
     }
-  }
-  ,
+  },
   {
     id: "lausanne1",
     name: "University Board, Lausanne",
     country: "Switzerland",
     coordinates: { lat: 46.5197, lng: 6.6323 },
-    context: "University campus",
+    context: "University campus in Lausanne",
     year: "2025",
     image: "/images/bboard2.jpg",
     bulletinBoard: {
@@ -62,7 +61,7 @@ export const locations = [
           id: "item3",
           type: "film",
           title: "Cinépsy Screening",
-          content: "One Flew Over the Cuckoo’s Nest. Mental health film series.",
+          content: "One Flew Over the Cuckoo's Nest. Mental health film series.",
           style: { rotation: 1, color: "#f8f8ff" }
         }
       ]
@@ -73,7 +72,7 @@ export const locations = [
     name: "Village Public Board",
     country: "United Kingdom",
     coordinates: { lat: 51.7520, lng: -1.2577 },
-    context: "Small Town Square",
+    context: "Small Town Square in Oxford",
     year: "2012",
     image: "/images/bboard3.jpg",
     bulletinBoard: {
@@ -82,7 +81,7 @@ export const locations = [
           id: "item1",
           type: "notice",
           title: "Church Roast Dinner",
-          content: "Join us Sunday for a free meal and fellowship at St. Margaret’s.",
+          content: "Join us Sunday for a free meal and fellowship at St. Margaret's.",
           style: { rotation: -1, color: "#ffffe0" }
         },
         {
@@ -104,7 +103,7 @@ export const locations = [
   },
   {
     id: "losangeles1",
-    name: "Arts District Glass Board",
+    name: "Arts District Glass Board in Los Angeles",
     country: "USA",
     coordinates: { lat: 34.0522, lng: -118.2437 },
     context: "Arts District Storefront",
@@ -138,10 +137,10 @@ export const locations = [
   },
   {
     id: "boston1",
-    name: "Student Commons Board",
+    name: "Student Commons Board in Boston",
     country: "USA",
     coordinates: { lat: 42.3393, lng: -71.0892 },
-    context: "University Student Area",
+    context: "Northeastern University Student Commons",
     year: "2025",
     image: "/images/bboard5.jpg",
     bulletinBoard: {
@@ -166,176 +165,176 @@ export const locations = [
           title: "Virtual Reality Research Volunteers",
           content: "Up to $490 compensation. Weekly visits. All participants welcome.",
           style: { rotation: 1, color: "#fff0f5" }
+        }
+      ]
+    }
+  },
+  {
+    id: "chelyabinsk1",
+    name: "Apartment Hallway Poster in Chelyabinsk",
+    country: "Russia",
+    coordinates: { lat: 55.1604, lng: 61.4026 },
+    context: "Elevator or apartment hallway",
+    year: "2020s",
+    image: "/images/bboard12.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "sale",
+          title: "Coat Sale",
+          content: "Brand clearance sale — up to 70% off imported winter coats.",
+          style: { rotation: -1, color: "#f5f5dc" }
         },
         {
-          id: "chelyabinsk1",
-          name: "Apartment Hallway Poster",
-          country: "Russia",
-          coordinates: { lat: 55.1604, lng: 61.4026 },
-          context: "Elevator or apartment hallway",
-          year: "2020s",
-          image: "/images/bboard12.jpg",
-          bulletinBoard: {
-            items: [
-              {
-                id: "item1",
-                type: "sale",
-                title: "Coat Sale",
-                content: "Brand clearance sale — up to 70% off imported winter coats.",
-                style: { rotation: -1, color: "#f5f5dc" }
-              },
-              {
-                id: "item2",
-                type: "real-estate",
-                title: "Apartment Purchase",
-                content: "Looking to buy a flat in any condition. Call 8-961-964-42-10.",
-                style: { rotation: 2, color: "#fafad2" }
-              },
-              {
-                id: "item3",
-                type: "real-estate",
-                title: "Urgent Apartment Sale",
-                content: "For sale urgently. Handwritten ad taped at bottom.",
-                style: { rotation: -2, color: "#ffffe0" }
-              }
-            ]
-          }
+          id: "item2",
+          type: "real-estate",
+          title: "Apartment Purchase",
+          content: "Looking to buy a flat in any condition. Call 8-961-964-42-10.",
+          style: { rotation: 2, color: "#fafad2" }
         },
         {
-          id: "belgrade1",
-          name: "Bohemian Cafe Board",
-          country: "Serbia",
-          coordinates: { lat: 44.7866, lng: 20.4489 },
-          context: "Bar/Cafe creative board",
-          year: "2020s",
-          image: "/images/bboard13.jpg",
-          bulletinBoard: {
-            items: [
-              {
-                id: "item1",
-                type: "graffiti",
-                title: "Religious Icons",
-                content: "Small postcards of saints and drawings pinned to chaotic board.",
-                style: { rotation: 1, color: "#ffe4e1" }
-              },
-              {
-                id: "item2",
-                type: "art",
-                title: "Sketch & Selfies",
-                content: "Mixed notes, drawings, receipts, photo booth pictures.",
-                style: { rotation: -1, color: "#f0f8ff" }
-              },
-              {
-                id: "item3",
-                type: "ticket",
-                title: "Sports Bet Receipt",
-                content: "Betting stub for Italy-Spain match. Total: EUR 188.47.",
-                style: { rotation: 2, color: "#fffacd" }
-              }
-            ]
-          }
+          id: "item3",
+          type: "real-estate",
+          title: "Urgent Apartment Sale",
+          content: "For sale urgently. Handwritten ad taped at bottom.",
+          style: { rotation: -2, color: "#ffffe0" }
+        }
+      ]
+    }
+  },
+  {
+    id: "belgrade1",
+    name: "Bohemian Cafe Board",
+    country: "Serbia",
+    coordinates: { lat: 44.7866, lng: 20.4489 },
+    context: "Bar/Cafe creative board",
+    year: "2020s",
+    image: "/images/bboard13.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "graffiti",
+          title: "Religious Icons",
+          content: "Small postcards of saints and drawings pinned to chaotic board.",
+          style: { rotation: 1, color: "#ffe4e1" }
         },
         {
-          id: "tokorozawa1",
-          name: "Town Festival Billboard",
-          country: "Japan",
-          coordinates: { lat: 35.7997, lng: 139.4689 },
-          context: "Suburban town festival board",
-          year: "2022",
-          image: "/images/bboard14.jpg",
-          bulletinBoard: {
-            items: [
-              {
-                id: "item1",
-                type: "festival",
-                title: "Tokorozawa Matsuri",
-                content: "Traditional parade and theater show. October 9th, 2022.",
-                style: { rotation: -2, color: "#ffebcd" }
-              },
-              {
-                id: "item2",
-                type: "public-notice",
-                title: "Police Notice",
-                content: "Information for citizens about local services.",
-                style: { rotation: 2, color: "#f0fff0" }
-              },
-              {
-                id: "item3",
-                type: "safety",
-                title: "Community Reminders",
-                content: "Bulletin board managed by local government.",
-                style: { rotation: 0, color: "#e6e6fa" }
-              }
-            ]
-          }
+          id: "item2",
+          type: "art",
+          title: "Sketch & Selfies",
+          content: "Mixed notes, drawings, receipts, photo booth pictures.",
+          style: { rotation: -1, color: "#f0f8ff" }
         },
         {
-          id: "gainesville1",
-          name: "Health Services Bulletin",
-          country: "USA",
-          coordinates: { lat: 29.6516, lng: -82.3248 },
-          context: "Community health center hallway",
-          year: "2020s",
-          image: "/images/bboard15.jpg",
-          bulletinBoard: {
-            items: [
-              {
-                id: "item1",
-                type: "health",
-                title: "Free Medical Care",
-                content: "Pediatric services for children. Income-qualified only.",
-                style: { rotation: -1, color: "#faf0e6" }
-              },
-              {
-                id: "item2",
-                type: "program",
-                title: "Youth Mentoring",
-                content: "Peer mentoring and support services offered.",
-                style: { rotation: 2, color: "#f0f8ff" }
-              },
-              {
-                id: "item3",
-                type: "nutrition",
-                title: "MyPlate for Families",
-                content: "USDA nutrition guidance for parents.",
-                style: { rotation: 1, color: "#fffff0" }
-              }
-            ]
-          }
+          id: "item3",
+          type: "ticket",
+          title: "Sports Bet Receipt",
+          content: "Betting stub for Italy-Spain match. Total: EUR 188.47.",
+          style: { rotation: 2, color: "#fffacd" }
+        }
+      ]
+    }
+  },
+  {
+    id: "tokorozawa1",
+    name: "Town Festival Billboard",
+    country: "Japan",
+    coordinates: { lat: 35.7997, lng: 139.4689 },
+    context: "Suburban town festival board",
+    year: "2022",
+    image: "/images/bboard14.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "festival",
+          title: "Tokorozawa Matsuri",
+          content: "Traditional parade and theater show. October 9th, 2022.",
+          style: { rotation: -2, color: "#ffebcd" }
         },
         {
-          id: "wellesley1",
-          name: "Wellesley Bookstore Board",
-          country: "USA",
-          coordinates: { lat: 42.2965, lng: -71.2924 },
-          context: "Bookstore exterior",
-          year: "2010s",
-          image: "/images/bboard16.jpg",
-          bulletinBoard: {
-            items: [
-              {
-                id: "item1",
-                type: "reading",
-                title: "Author Events",
-                content: "Readings and Q&A hosted monthly.",
-                style: { rotation: -2, color: "#ffe4e1" }
-              },
-              {
-                id: "item2",
-                type: "literary",
-                title: "Book Launches",
-                content: "Flyers and posters of upcoming publications.",
-                style: { rotation: 2, color: "#f5f5dc" }
-              },
-              {
-                id: "item3",
-                type: "local",
-                title: "Community Posts",
-                content: "Art fairs, playdates, and calls for volunteers.",
-                style: { rotation: -1, color: "#fff0f5" }
-              }
-            ]
-          }
+          id: "item2",
+          type: "public-notice",
+          title: "Police Notice",
+          content: "Information for citizens about local services.",
+          style: { rotation: 2, color: "#f0fff0" }
+        },
+        {
+          id: "item3",
+          type: "safety",
+          title: "Community Reminders",
+          content: "Bulletin board managed by local government.",
+          style: { rotation: 0, color: "#e6e6fa" }
+        }
+      ]
+    }
+  },
+  {
+    id: "gainesville1",
+    name: "Health Services Bulletin",
+    country: "USA",
+    coordinates: { lat: 29.6516, lng: -82.3248 },
+    context: "Community health center hallway",
+    year: "2020s",
+    image: "/images/bboard15.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "health",
+          title: "Free Medical Care",
+          content: "Pediatric services for children. Income-qualified only.",
+          style: { rotation: -1, color: "#faf0e6" }
+        },
+        {
+          id: "item2",
+          type: "program",
+          title: "Youth Mentoring",
+          content: "Peer mentoring and support services offered.",
+          style: { rotation: 2, color: "#f0f8ff" }
+        },
+        {
+          id: "item3",
+          type: "nutrition",
+          title: "MyPlate for Families",
+          content: "USDA nutrition guidance for parents.",
+          style: { rotation: 1, color: "#fffff0" }
+        }
+      ]
+    }
+  },
+  {
+    id: "wellesley1",
+    name: "Wellesley Bookstore Board",
+    country: "USA",
+    coordinates: { lat: 42.2965, lng: -71.2924 },
+    context: "Bookstore exterior",
+    year: "2010s",
+    image: "/images/bboard16.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "reading",
+          title: "Author Events",
+          content: "Readings and Q&A hosted monthly.",
+          style: { rotation: -2, color: "#ffe4e1" }
+        },
+        {
+          id: "item2",
+          type: "literary",
+          title: "Book Launches",
+          content: "Flyers and posters of upcoming publications.",
+          style: { rotation: 2, color: "#f5f5dc" }
+        },
+        {
+          id: "item3",
+          type: "local",
+          title: "Community Posts",
+          content: "Art fairs, playdates, and calls for volunteers.",
+          style: { rotation: -1, color: "#fff0f5" }
         }
       ]
     }
