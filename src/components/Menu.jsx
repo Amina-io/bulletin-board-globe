@@ -7,7 +7,7 @@ export default function Menu() {
   const menuItems = [
     {
       id: 'what',
-      title: 'WHAT IS THIS?',
+      title: 'what is this?',
       icon: '⭐',
       content: `Bulletin boards in cafés, universities, and community centers are filled with handwritten notes, local announcements, and personal ads. They're a global human phenomenon and an analog method of widely and easily exchanging bulletin.
 
@@ -15,7 +15,7 @@ I've always loved bulletin boards and started this so we could gather a collecti
     },
     {
       id: 'submit',
-      title: 'SUBMIT A BOARD!',
+      title: 'submit a board!',
       icon: '💖',
       content: `Please send images of boards in!
 
@@ -23,7 +23,7 @@ I want as many boards as possible from around the world! Biggest request is that
     },
     {
       id: 'question',
-      title: 'QUESTION~?',
+      title: 'question~?',
       icon: '✨',
       content: `Please email me here if you have any questions or if you notice any of the boards need corrections`
     }
