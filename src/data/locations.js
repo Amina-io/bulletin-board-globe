@@ -34,132 +34,310 @@ export const locations = [
     }
   }
   ,
-    {
-      id: 2,
-      name: "Greenwich Village Café",
-      country: "USA",
-      coordinates: { lat: 40.7331, lng: -74.0014 },
-      context: "Local Café",
-      bulletinBoard: {
-        items: [
-          {
-            id: 1,
-            type: "service",
-            title: "Guitar Lessons Available",
-            content: "Experienced musician offering lessons. $30/hour. Call Mike: 555-0123",
-            style: { rotation: 2, color: "#FFEFD5" }
-          },
-          {
-            id: 2,
-            type: "roommate",
-            title: "Roommate Wanted",
-            content: "2BR apartment in Brooklyn. $800/month. Pet-friendly. Contact Sarah.",
-            style: { rotation: -3, color: "#E6E6FA" }
-          },
-          {
-            id: 3,
-            type: "event",
-            title: "Open Mic Night",
-            content: "Every Friday 8PM. Sign up at counter. Coffee & good vibes guaranteed!",
-            style: { rotation: 1, color: "#F5FFFA" }
-          }
-        ]
-      }
-    },
-    {
-      id: 3,
-      name: "Cambridge University Porter's Lodge",
-      country: "UK",
-      coordinates: { lat: 52.2043, lng: 0.1218 },
-      context: "University College",
-      bulletinBoard: {
-        items: [
-          {
-            id: 1,
-            type: "formal",
-            title: "Formal Hall Notice",
-            content: "Black tie dinner this Saturday. Wine pairings by the Cellar Master. Book by Wed.",
-            style: { rotation: -1, color: "#F8F8FF" }
-          },
-          {
-            id: 2,
-            type: "sport",
-            title: "Boat Club Tryouts",
-            content: "Novice rowers welcome! Meet at the boathouse, 6AM sharp. No experience needed.",
-            style: { rotation: 2, color: "#F0FFFF" }
-          },
-          {
-            id: 3,
-            type: "academic",
-            title: "Philosophy Society Debate",
-            content: "'Is free will an illusion?' Tuesday 7PM, Old Library. Tea & biscuits provided.",
-            style: { rotation: -2, color: "#FFF8DC" }
-          }
-        ]
-      }
-    },
-    {
-      id: 4,
-      name: "Montmartre Community Center",
-      country: "France",
-      coordinates: { lat: 48.8867, lng: 2.3431 },
-      context: "Community Center",
-      bulletinBoard: {
-        items: [
-          {
-            id: 1,
-            type: "art",
-            title: "Exposition d'Art Local",
-            content: "Local artists showcase. Opening night: wine & cheese. Vernissage vendredi 19h.",
-            style: { rotation: 3, color: "#FFFACD" }
-          },
-          {
-            id: 2,
-            type: "language",
-            title: "English-French Exchange",
-            content: "Language practice partners wanted. Tuesdays 6PM. Beginners welcome!",
-            style: { rotation: -1, color: "#F5F5DC" }
-          },
-          {
-            id: 3,
-            type: "lost",
-            title: "Chat Perdu - Lost Cat",
-            content: "Gris et blanc, répond au nom de Cléo. Récompense. Tel: 06.12.34.56.78",
-            style: { rotation: 1, color: "#FFE4E1" }
-          }
-        ]
-      }
-    },
-    {
-      id: 5,
-      name: "Melbourne University Student Union",
-      country: "Australia",
-      coordinates: { lat: -37.7964, lng: 144.9612 },
-      context: "Student Union Building",
-      bulletinBoard: {
-        items: [
-          {
-            id: 1,
-            type: "travel",
-            title: "Road Trip to Byron Bay",
-            content: "Looking for travel buddies! Leaving Friday, back Sunday. Split fuel costs.",
-            style: { rotation: -2, color: "#F0F8FF" }
-          },
-          {
-            id: 2,
-            type: "textbook",
-            title: "Psychology Textbooks for Sale",
-            content: "PSYC1001 & PSYC2001 books. Good condition. $50 each or $80 for both.",
-            style: { rotation: 2, color: "#FFFAF0" }
-          },
-          {
-            id: 3,
-            type: "band",
-            title: "Drummer Needed",
-            content: "Indie rock band seeks drummer. We have studio space. Gigs lined up!",
-            style: { rotation: -1, color: "#F5FFFA" }
-          }
-        ]
-      }
+  {
+    id: "lausanne1",
+    name: "University Board, Lausanne",
+    country: "Switzerland",
+    coordinates: { lat: 46.5197, lng: 6.6323 },
+    context: "University campus",
+    year: "2025",
+    image: "/images/bboard2.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "event",
+          title: "Lindy Hop Workshop",
+          content: "Every Tuesday. Learn the basics of swing dance in a fun, inclusive space!",
+          style: { rotation: -2, color: "#ffe4b5" }
+        },
+        {
+          id: "item2",
+          type: "conference",
+          title: "Zurich Book Fair Panel",
+          content: "Featuring Kamel Daoud and Laurence Nobécourt. April 2025.",
+          style: { rotation: 2, color: "#e0ffff" }
+        },
+        {
+          id: "item3",
+          type: "film",
+          title: "Cinépsy Screening",
+          content: "One Flew Over the Cuckoo’s Nest. Mental health film series.",
+          style: { rotation: 1, color: "#f8f8ff" }
+        }
+      ]
     }
-  ];
+  },
+  {
+    id: "oxford1",
+    name: "Village Public Board",
+    country: "United Kingdom",
+    coordinates: { lat: 51.7520, lng: -1.2577 },
+    context: "Small Town Square",
+    year: "2012",
+    image: "/images/bboard3.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "notice",
+          title: "Church Roast Dinner",
+          content: "Join us Sunday for a free meal and fellowship at St. Margaret’s.",
+          style: { rotation: -1, color: "#ffffe0" }
+        },
+        {
+          id: "item2",
+          type: "fair",
+          title: "Isle of Wight Raffle",
+          content: "Enter to win weekend getaways! Sponsored by local vendors.",
+          style: { rotation: 3, color: "#f5f5dc" }
+        },
+        {
+          id: "item3",
+          type: "job",
+          title: "Local Cleaner Wanted",
+          content: "Flexible hours. Reliable and experienced applicants only.",
+          style: { rotation: -3, color: "#fafad2" }
+        }
+      ]
+    }
+  },
+  {
+    id: "losangeles1",
+    name: "Arts District Glass Board",
+    country: "USA",
+    coordinates: { lat: 34.0522, lng: -118.2437 },
+    context: "Arts District Storefront",
+    year: "2007",
+    image: "/images/bboard4.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "event",
+          title: "Chicken Teriyaki Bingo",
+          content: "Maryknoll Karate Club – Sept 23, 2007. Win cash prizes and a $100 gift card!",
+          style: { rotation: 2, color: "#ffe4e1" }
+        },
+        {
+          id: "item2",
+          type: "urbanism",
+          title: "Park(ing) Day",
+          content: "Come enjoy a parking lot turned into a park for a day! Community art and activities.",
+          style: { rotation: -1, color: "#98fb98" }
+        },
+        {
+          id: "item3",
+          type: "tribute",
+          title: "To Joel Bloom",
+          content: "Please pet the dogs in heaven for me. — Sheri Reyes",
+          style: { rotation: 1, color: "#fffacd" }
+        }
+      ]
+    }
+  },
+  {
+    id: "boston1",
+    name: "Student Commons Board",
+    country: "USA",
+    coordinates: { lat: 42.3393, lng: -71.0892 },
+    context: "University Student Area",
+    year: "2025",
+    image: "/images/bboard5.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "organization",
+          title: "NU Huskers & Outing Club",
+          content: "Join us for hiking, skiing, and outdoor adventures this semester!",
+          style: { rotation: -2, color: "#faf0e6" }
+        },
+        {
+          id: "item2",
+          type: "submission",
+          title: "Horijon.org Call for Art",
+          content: "Submit your art & design portfolio by March 7. $200 grant available.",
+          style: { rotation: 2, color: "#e6e6fa" }
+        },
+        {
+          id: "item3",
+          type: "study",
+          title: "Virtual Reality Research Volunteers",
+          content: "Up to $490 compensation. Weekly visits. All participants welcome.",
+          style: { rotation: 1, color: "#fff0f5" }
+        },
+        {
+          id: "chelyabinsk1",
+          name: "Apartment Hallway Poster",
+          country: "Russia",
+          coordinates: { lat: 55.1604, lng: 61.4026 },
+          context: "Elevator or apartment hallway",
+          year: "2020s",
+          image: "/images/bboard12.jpg",
+          bulletinBoard: {
+            items: [
+              {
+                id: "item1",
+                type: "sale",
+                title: "Coat Sale",
+                content: "Brand clearance sale — up to 70% off imported winter coats.",
+                style: { rotation: -1, color: "#f5f5dc" }
+              },
+              {
+                id: "item2",
+                type: "real-estate",
+                title: "Apartment Purchase",
+                content: "Looking to buy a flat in any condition. Call 8-961-964-42-10.",
+                style: { rotation: 2, color: "#fafad2" }
+              },
+              {
+                id: "item3",
+                type: "real-estate",
+                title: "Urgent Apartment Sale",
+                content: "For sale urgently. Handwritten ad taped at bottom.",
+                style: { rotation: -2, color: "#ffffe0" }
+              }
+            ]
+          }
+        },
+        {
+          id: "belgrade1",
+          name: "Bohemian Cafe Board",
+          country: "Serbia",
+          coordinates: { lat: 44.7866, lng: 20.4489 },
+          context: "Bar/Cafe creative board",
+          year: "2020s",
+          image: "/images/bboard13.jpg",
+          bulletinBoard: {
+            items: [
+              {
+                id: "item1",
+                type: "graffiti",
+                title: "Religious Icons",
+                content: "Small postcards of saints and drawings pinned to chaotic board.",
+                style: { rotation: 1, color: "#ffe4e1" }
+              },
+              {
+                id: "item2",
+                type: "art",
+                title: "Sketch & Selfies",
+                content: "Mixed notes, drawings, receipts, photo booth pictures.",
+                style: { rotation: -1, color: "#f0f8ff" }
+              },
+              {
+                id: "item3",
+                type: "ticket",
+                title: "Sports Bet Receipt",
+                content: "Betting stub for Italy-Spain match. Total: EUR 188.47.",
+                style: { rotation: 2, color: "#fffacd" }
+              }
+            ]
+          }
+        },
+        {
+          id: "tokorozawa1",
+          name: "Town Festival Billboard",
+          country: "Japan",
+          coordinates: { lat: 35.7997, lng: 139.4689 },
+          context: "Suburban town festival board",
+          year: "2022",
+          image: "/images/bboard14.jpg",
+          bulletinBoard: {
+            items: [
+              {
+                id: "item1",
+                type: "festival",
+                title: "Tokorozawa Matsuri",
+                content: "Traditional parade and theater show. October 9th, 2022.",
+                style: { rotation: -2, color: "#ffebcd" }
+              },
+              {
+                id: "item2",
+                type: "public-notice",
+                title: "Police Notice",
+                content: "Information for citizens about local services.",
+                style: { rotation: 2, color: "#f0fff0" }
+              },
+              {
+                id: "item3",
+                type: "safety",
+                title: "Community Reminders",
+                content: "Bulletin board managed by local government.",
+                style: { rotation: 0, color: "#e6e6fa" }
+              }
+            ]
+          }
+        },
+        {
+          id: "gainesville1",
+          name: "Health Services Bulletin",
+          country: "USA",
+          coordinates: { lat: 29.6516, lng: -82.3248 },
+          context: "Community health center hallway",
+          year: "2020s",
+          image: "/images/bboard15.jpg",
+          bulletinBoard: {
+            items: [
+              {
+                id: "item1",
+                type: "health",
+                title: "Free Medical Care",
+                content: "Pediatric services for children. Income-qualified only.",
+                style: { rotation: -1, color: "#faf0e6" }
+              },
+              {
+                id: "item2",
+                type: "program",
+                title: "Youth Mentoring",
+                content: "Peer mentoring and support services offered.",
+                style: { rotation: 2, color: "#f0f8ff" }
+              },
+              {
+                id: "item3",
+                type: "nutrition",
+                title: "MyPlate for Families",
+                content: "USDA nutrition guidance for parents.",
+                style: { rotation: 1, color: "#fffff0" }
+              }
+            ]
+          }
+        },
+        {
+          id: "wellesley1",
+          name: "Wellesley Bookstore Board",
+          country: "USA",
+          coordinates: { lat: 42.2965, lng: -71.2924 },
+          context: "Bookstore exterior",
+          year: "2010s",
+          image: "/images/bboard16.jpg",
+          bulletinBoard: {
+            items: [
+              {
+                id: "item1",
+                type: "reading",
+                title: "Author Events",
+                content: "Readings and Q&A hosted monthly.",
+                style: { rotation: -2, color: "#ffe4e1" }
+              },
+              {
+                id: "item2",
+                type: "literary",
+                title: "Book Launches",
+                content: "Flyers and posters of upcoming publications.",
+                style: { rotation: 2, color: "#f5f5dc" }
+              },
+              {
+                id: "item3",
+                type: "local",
+                title: "Community Posts",
+                content: "Art fairs, playdates, and calls for volunteers.",
+                style: { rotation: -1, color: "#fff0f5" }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

@@ -4,6 +4,10 @@ import '../styles/BulletinBoard.css';
 export default function BulletinModal({ location, onClose }) {
   if (!location) return null;
 
+  // Debug logging
+  console.log('BulletinModal rendering with location:', location);
+  console.log('Image path:', location.image);
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="bulletin-modal modern" onClick={(e) => e.stopPropagation()}>
@@ -32,6 +36,8 @@ export default function BulletinModal({ location, onClose }) {
               borderRadius: "12px",
               marginBottom: "20px"
             }}
+            onLoad={() => console.log('Image loaded successfully:', location.image)}
+            onError={(e) => console.error('Image failed to load:', location.image, e)}
           />
         )}
         

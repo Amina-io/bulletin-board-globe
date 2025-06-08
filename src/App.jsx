@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Globe from './components/Globe';
 import BulletinModal from './components/BulletinModal';
+import Menu from './components/Menu';
 import './App.css';
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
         <h1>Global Bulletin Board Explorer</h1>
         <p>Click on markers to explore local bulletin boards from around the world</p>
       </header>
+      
+      <Menu />
       
       <div className="globe-container">
         <Globe onLocationClick={handleLocationClick} />
