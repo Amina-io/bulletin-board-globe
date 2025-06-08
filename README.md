@@ -10,14 +10,6 @@ An interactive 3D globe that lets you explore local bulletin boards from around 
 - 🎨 Realistic bulletin board styling with rotation and textures
 - 🖱️ Smooth globe rotation and zoom controls
 
-## Locations (currently MOCK / placeholders - real UPDATE in progress)
-
-- **Tokyo University Library** (Japan) - Academic notices and cultural events
-- **Greenwich Village Café** (USA) - Community services and local events  
-- **Cambridge University** (UK) - Formal dinners and academic activities
-- **Montmartre Community Center** (France) - Art exhibitions and language exchange
-- **Melbourne University** (Australia) - Student life and travel opportunities
-
 ## Tech Stack
 
 - React 19
