@@ -32,9 +32,11 @@ function checkWebGLSupport() {
 // Loading component
 function Loading() {
   return (
-    <div className="loading">
-      📌 Loading bulletin boards from around the world...
-    </div>
+    <Html center>
+      <div className="loading">
+        📌 Loading bulletin boards from around the world...
+      </div>
+    </Html>
   );
 }
 
@@ -44,15 +46,17 @@ function ErrorFallback({ error }) {
   const hasWebGL = checkWebGLSupport();
   
   return (
-    <div className="loading">
-      ⚠️ Geographic loading has failed. Please refresh the page!
-      <br />
-      <small style={{ fontSize: '12px', color: '#666', marginTop: '8px', display: 'block' }}>
-        {error?.message || 'WebGL or texture loading error'}
+    <Html center>
+      <div className="loading">
+        ⚠️ Geographic loading has failed. Please refresh the page!
         <br />
-        WebGL Support: {hasWebGL ? '✓ Available' : '✗ Not Available'}
-      </small>
-    </div>
+        <small style={{ fontSize: '12px', color: '#666', marginTop: '8px', display: 'block' }}>
+          {error?.message || 'WebGL or texture loading error'}
+          <br />
+          WebGL Support: {hasWebGL ? '✓ Available' : '✗ Not Available'}
+        </small>
+      </div>
+    </Html>
   );
 }
 

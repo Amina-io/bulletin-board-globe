@@ -508,6 +508,311 @@ export const locations = [
         }
       ]
     }
-  }
-  
+  },
+  {
+    id: "champaign1",
+    name: "University Board in Champaign",
+    country: "USA",
+    coordinates: { lat: 40.1164, lng: -88.2434 },
+    context: "Student Commons in Champaign",
+    year: "2010s",
+    image: "/images/bboard22.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "study",
+          title: "Dissertation Editing",
+          content: "Help with structure, grammar, and clarity. $2/page.",
+          style: { rotation: -2, color: "#f5f5dc" }
+        },
+        {
+          id: "item2",
+          type: "services",
+          title: "Learn Tango",
+          content: "Fast track to tango competence. Join our summer program!",
+          style: { rotation: 1, color: "#f0fff0" }
+        },
+        {
+          id: "item3",
+          type: "research",
+          title: "Paid Study of Local Services",
+          content: "Seeking participants from Champaign-Urbana. Confidential support.",
+          style: { rotation: 2, color: "#fafad2" }
+        }
+      ]
+    }
+  },
+  {
+    id: "madrid1",
+    name: "Madrid Music Poster Wall",
+    country: "Spain",
+    coordinates: { lat: 40.4168, lng: -3.7038 },
+    context: "Music venue wall in Madrid",
+    year: "1990s",
+    image: "/images/bboard23.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "concert",
+          title: "Public Enemy Live",
+          content: "29 Oct, 22:00h. Legendary night of hip-hop.",
+          style: { rotation: -2, color: "#ffe4b5" }
+        },
+        {
+          id: "item2",
+          type: "concert",
+          title: "U2 Santiago Show",
+          content: "With UB40 and Pretenders. Estadio Santiago Bernabéu.",
+          style: { rotation: 2, color: "#f8f8ff" }
+        },
+        {
+          id: "item3",
+          type: "venue",
+          title: "Subterfuge Records",
+          content: "Flyers from Spain’s underground pop and punk scene.",
+          style: { rotation: 1, color: "#fff0f5" }
+        }
+      ]
+    }
+  },
+  {
+    id: "uppsala1",
+    name: "Uppsala Trade Board",
+    country: "Sweden",
+    coordinates: { lat: 59.8586, lng: 17.6389 },
+    context: "Uppsala neighborhood board in residential area",
+    year: "2010s",
+    image: "/images/bboard24.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "exchange",
+          title: "Logo for Shower",
+          content: "BYTES: LOGOTYP MOT EN DUSCH",
+          style: { rotation: 2, color: "#e0ffff" }
+        },
+        {
+          id: "item2",
+          type: "exchange",
+          title: "Brochure for Pizza",
+          content: "BYTES: BROSCHYR MOT FEM PIZZOR",
+          style: { rotation: -1, color: "#fffacd" }
+        },
+        {
+          id: "item3",
+          type: "event",
+          title: "Church Announcements",
+          content: "Local services and music events in Swedish.",
+          style: { rotation: 1, color: "#f0fff0" }
+        }
+      ]
+    }
+  },
+  {
+    id: "seoul1",
+    name: "DJ Pole Flyer in Seoul",
+    country: "South Korea",
+    coordinates: { lat: 37.5665, lng: 126.978 },
+    context: "Seoul telephone pole",
+    year: "2020s",
+    image: "/images/bboard25.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "party",
+          title: "Indie Night Event",
+          content: "Indian Summer party — DJ set, tickets include drinks.",
+          style: { rotation: -1, color: "#ffe4e1" }
+        },
+        {
+          id: "item2",
+          type: "sticker",
+          title: "Layered Stickers",
+          content: "Graffiti, stickers, and tags densely packed.",
+          style: { rotation: 2, color: "#f5f5f5" }
+        },
+        {
+          id: "item3",
+          type: "poster",
+          title: "Korean Urban Visuals",
+          content: "Iconic mix of street ephemera on weathered surface.",
+          style: { rotation: 1, color: "#faf0e6" }
+        }
+      ]
+    }
+  },
+  {
+    id: "gainesville2",
+    name: "SWAG Community Bulletin Board",
+    country: "USA",
+    coordinates: { lat: 29.6516, lng: -82.3248 },
+    context: "Gainesville community board",
+    year: "2020s",
+    image: "/images/bboard26.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "aid",
+          title: "Free Medical Services",
+          content: "Pediatric programs and nutrition advice.",
+          style: { rotation: -1, color: "#fffff0" }
+        },
+        {
+          id: "item2",
+          type: "outreach",
+          title: "Youth Peer Mentoring",
+          content: "Support programs for teens. NAMI Gainesville.",
+          style: { rotation: 2, color: "#e6e6fa" }
+        },
+        {
+          id: "item3",
+          type: "community",
+          title: "Diabetes Awareness",
+          content: "Cut your risk with community guidance.",
+          style: { rotation: 1, color: "#f5f5dc" }
+        }
+      ]
+    }
+  },
+  {
+    id: "tokyo2",
+    name: "Handwritten Urban Board",
+    country: "Japan",
+    coordinates: { lat: 35.6895, lng: 139.6917 },
+    context: "Tokyo alleyway",
+    year: "2000s",
+    image: "/images/bboard27.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "advocacy",
+          title: "Call for Justice",
+          content: "Colorful hand-written notices referencing laws and rights.",
+          style: { rotation: -2, color: "#ffffe0" }
+        },
+        {
+          id: "item2",
+          type: "education",
+          title: "School Tutoring Ad",
+          content: "Yellow and blue flyers for student help.",
+          style: { rotation: 2, color: "#ffe4b5" }
+        },
+        {
+          id: "item3",
+          type: "religious",
+          title: "Flyer with Buddhist Text",
+          content: "Laminated sheet hung near doorway.",
+          style: { rotation: 0, color: "#fffacd" }
+        }
+      ]
+    }
+  },
+  {
+    id: "hongkong1",
+    name: "Apartment Flyer Wall in Hong Kong",
+    country: "China",
+    coordinates: { lat: 22.3193, lng: 114.1694 },
+    context: "Hong Kong apartment entrance",
+    year: "2010s",
+    image: "/images/bboard28.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "event",
+          title: "Tea Social",
+          content: "Flyers promoting local tea parties and gatherings.",
+          style: { rotation: -2, color: "#fafad2" }
+        },
+        {
+          id: "item2",
+          type: "announcement",
+          title: "Elderly Center Info",
+          content: "Events for seniors and aging community services.",
+          style: { rotation: 1, color: "#fff0f5" }
+        },
+        {
+          id: "item3",
+          type: "community",
+          title: "Apartment Notices",
+          content: "Common bulletin space for multiple apartments.",
+          style: { rotation: 2, color: "#f0fff0" }
+        }
+      ]
+    }
+  },
+  {
+    id: "singapore1",
+    name: "Food Court Poster Column",
+    country: "Singapore",
+    coordinates: { lat: 1.3521, lng: 103.8198 },
+    context: "Singaporean Market",
+    year: "2010s",
+    image: "/images/bboard29.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "food",
+          title: "Spicy Noodle Special",
+          content: "Promotion for local dishes. Laminated tear-off flyer.",
+          style: { rotation: 1, color: "#ffe4e1" }
+        },
+        {
+          id: "item2",
+          type: "ad",
+          title: "Tuition & Massage",
+          content: "Flyers offering tutoring, wellness, and food delivery.",
+          style: { rotation: -1, color: "#fafad2" }
+        },
+        {
+          id: "item3",
+          type: "notice",
+          title: "Community Messages",
+          content: "Marketplace posts at public eatery entrance.",
+          style: { rotation: 2, color: "#e0ffff" }
+        }
+      ]
+    }
+  },
+  {
+    id: "london1",
+    name: "London Record Shop Board",
+    country: "UK",
+    coordinates: { lat: 51.5074, lng: -0.1278 },
+    context: "London record shop",
+    year: "2010s",
+    image: "/images/bboard30.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "concert",
+          title: "Flyers: Wordplay, Markets, Bryn Christopher",
+          content: "A creative cluster of music and community flyers.",
+          style: { rotation: -1, color: "#f0f8ff" }
+        },
+        {
+          id: "item2",
+          type: "literature",
+          title: "Poetry & Zine Posters",
+          content: "Calls for readers, book clubs, and spoken word.",
+          style: { rotation: 2, color: "#f5f5dc" }
+        },
+        {
+          id: "item3",
+          type: "culture",
+          title: "Glass Door Archive",
+          content: "A visible archive of subcultural London events.",
+          style: { rotation: 1, color: "#fffff0" }
+        }
+      ]
+    }
+  }  
 ]
