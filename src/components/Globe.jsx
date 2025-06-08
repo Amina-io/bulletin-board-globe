@@ -27,11 +27,20 @@ function Loading() {
   );
 }
 
+// Error fallback component
+function ErrorFallback() {
+  return (
+    <div className="loading">
+      ⚠️ Having trouble loading the globe. Please refresh the page!
+    </div>
+  );
+}
+
 // Earth and Markers combined component
 function EarthWithMarkers({ onLocationClick }) {
   const groupRef = useRef();
   
-  // Load earth texture
+  // Load earth texture with error handling
   const earthTexture = useLoader(TextureLoader, 'https://unpkg.com/three-globe/example/img/earth-day.jpg');
   
   useFrame(() => {
@@ -68,29 +77,75 @@ function EarthWithMarkers({ onLocationClick }) {
   );
 }
 
+// Error boundary for Canvas
+class CanvasErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, errorInfo) {
+    console.error('Canvas Error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <ErrorFallback />;
+    }
+
+    return this.props.children;
+  }
+}
+
 export default function Globe({ onLocationClick }) {
   return (
-    <Canvas
-      camera={{ position: [0, 0, 5], fov: 60 }}
-      style={{ width: '100%', height: '100vh' }}
-    >
-      <ambientLight intensity={0.4} />
-      <pointLight position={[10, 10, 10]} intensity={1} />
-      
-      <Suspense fallback={<Loading />}>
-        <EarthWithMarkers onLocationClick={onLocationClick} />
-      </Suspense>
-      
-      <OrbitControls
-        enableZoom={true}
-        enablePan={false}
-        enableRotate={true}
-        zoomSpeed={0.6}
-        panSpeed={0.5}
-        rotateSpeed={0.4}
-        minDistance={3}
-        maxDistance={8}
-      />
-    </Canvas>
+    <CanvasErrorBoundary>
+      <Canvas
+        camera={{ position: [0, 0, 5], fov: 60 }}
+        style={{ width: '100%', height: '100vh', background: 'transparent' }}
+        gl={{ 
+          antialias: true,
+          alpha: true,
+          preserveDrawingBuffer: false,
+          powerPreference: "high-performance"
+        }}
+        onCreated={({ gl, scene }) => {
+          // Make background transparent
+          gl.setClearColor(0x000000, 0);
+          
+          // Handle context loss
+          gl.domElement.addEventListener('webglcontextlost', (e) => {
+            console.warn('WebGL context lost');
+            e.preventDefault();
+          });
+          
+          gl.domElement.addEventListener('webglcontextrestored', () => {
+            console.log('WebGL context restored');
+          });
+        }}
+      >
+        <ambientLight intensity={0.4} />
+        <pointLight position={[10, 10, 10]} intensity={1} />
+        
+        <Suspense fallback={<Loading />}>
+          <EarthWithMarkers onLocationClick={onLocationClick} />
+        </Suspense>
+        
+        <OrbitControls
+          enableZoom={true}
+          enablePan={false}
+          enableRotate={true}
+          zoomSpeed={0.6}
+          panSpeed={0.5}
+          rotateSpeed={0.4}
+          minDistance={3}
+          maxDistance={8}
+        />
+      </Canvas>
+    </CanvasErrorBoundary>
   );
 }
