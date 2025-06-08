@@ -5,10 +5,10 @@ An interactive 3D globe that lets you explore local bulletin boards from around 
 ## Features
 
 - 🌍 Interactive 3D Earth globe with WebGL
-- 📍 Clickable location markers from 5 countries
 - 📋 Authentic bulletin board content from each location
 - 🎨 Realistic bulletin board styling with rotation and textures
 - 🖱️ Smooth globe rotation and zoom controls
+- ✨ Menu option
 
 ## Tech Stack
 
