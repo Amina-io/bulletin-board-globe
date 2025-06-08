@@ -1,36 +1,39 @@
 export const locations = [
-    {
-      id: 1,
-      name: "Tokyo University Library",
-      country: "Japan",
-      coordinates: { lat: 35.7128, lng: 139.7621 },
-      context: "University Library",
-      bulletinBoard: {
-        items: [
-          {
-            id: 1,
-            type: "notice",
-            title: "Study Group - Advanced Mathematics",
-            content: "Weekly study sessions every Thursday 6PM. Room 302. All welcome!",
-            style: { rotation: -2, color: "#FFE4B5" }
-          },
-          {
-            id: 2,
-            type: "flyer",
-            title: "Cherry Blossom Festival",
-            content: "Join us for hanami viewing! April 15th, Ueno Park. Traditional food & music.",
-            style: { rotation: 3, color: "#FFB6C1" }
-          },
-          {
-            id: 3,
-            type: "personal",
-            title: "Lost: Black Notebook",
-            content: "Physics notes inside. If found, please contact Yuki at yuki@email.com",
-            style: { rotation: -1, color: "#F0F8FF" }
-          }
-        ]
-      }
-    },
+  {
+    id: "moscow1",
+    name: "Affirmations & Candy",
+    country: "Russia",
+    coordinates: { lat: 55.7558, lng: 37.6173 },
+    context: "Somewhere in  Moscow",
+    year: "2019",
+    image: "/images/moscow1.jpg", 
+    bulletinBoard: {
+      items: [
+        {
+          id: "affirmation1",
+          type: "tear-off",
+          title: "Take a piece of good mood!",
+          content: "Affirmations like: 'You are beautiful', 'You can do anything', 'Believe in yourself'. Each with candy attached.",
+          style: { rotation: -2, color: "#fce4ec" }
+        },
+        {
+          id: "ad1",
+          type: "flyer",
+          title: "Window Repair Services",
+          content: "Plastic window installation and adjustments. Call 333-107",
+          style: { rotation: 2, color: "#f0f8ff" }
+        },
+        {
+          id: "ad2",
+          type: "notice",
+          title: "Help With Real Estate",
+          content: "Rent / Sell / Buy / Find a flat. Call 8-977-032-36-92 — Zubidat",
+          style: { rotation: -3, color: "#faffc5" }
+        }
+      ]
+    }
+  }
+  ,
     {
       id: 2,
       name: "Greenwich Village Café",

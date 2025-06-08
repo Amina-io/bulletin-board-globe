@@ -6,29 +6,8 @@ import * as THREE from 'three';
 import { locations } from '../data/locations';
 import LocationMarker from './LocationMarker';
 
-// Earth component
-function Earth() {
-  const meshRef = useRef();
-  
-  // Load earth texture (we'll use a simple approach for now)
-  const earthTexture = useLoader(TextureLoader, 'https://unpkg.com/three-globe/example/img/earth-day.jpg');
-  
-  useFrame(() => {
-    if (meshRef.current) {
-      meshRef.current.rotation.y += 0.005; // Slow rotation
-    }
-  });
-
-  return (
-    <mesh ref={meshRef}>
-      <sphereGeometry args={[2, 64, 64]} />
-      <meshStandardMaterial map={earthTexture} />
-    </mesh>
-  );
-}
-
 // Convert lat/lng to 3D coordinates
-function latLngToVector3(lat, lng, radius = 2) {
+function latLngToVector3(lat, lng, radius = 2.05) {
   const phi = (90 - lat) * (Math.PI / 180);
   const theta = (lng + 180) * (Math.PI / 180);
   
@@ -39,17 +18,28 @@ function latLngToVector3(lat, lng, radius = 2) {
   return new THREE.Vector3(x, y, z);
 }
 
-export default function Globe({ onLocationClick }) {
+// Earth and Markers combined component
+function EarthWithMarkers({ onLocationClick }) {
+  const groupRef = useRef();
+  
+  // Load earth texture
+  const earthTexture = useLoader(TextureLoader, 'https://unpkg.com/three-globe/example/img/earth-day.jpg');
+  
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y += 0.001; // Much slower rotation
+    }
+  });
+
   return (
-    <Canvas
-      camera={{ position: [0, 0, 5], fov: 60 }}
-      style={{ width: '100%', height: '100vh' }}
-    >
-      <ambientLight intensity={0.4} />
-      <pointLight position={[10, 10, 10]} intensity={1} />
+    <group ref={groupRef}>
+      {/* Earth Sphere */}
+      <mesh>
+        <sphereGeometry args={[2, 64, 64]} />
+        <meshStandardMaterial map={earthTexture} />
+      </mesh>
       
-      <Earth />
-      
+      {/* Location Markers */}
       {locations.map((location) => {
         const position = latLngToVector3(
           location.coordinates.lat,
@@ -65,6 +55,20 @@ export default function Globe({ onLocationClick }) {
           />
         );
       })}
+    </group>
+  );
+}
+
+export default function Globe({ onLocationClick }) {
+  return (
+    <Canvas
+      camera={{ position: [0, 0, 5], fov: 60 }}
+      style={{ width: '100%', height: '100vh' }}
+    >
+      <ambientLight intensity={0.4} />
+      <pointLight position={[10, 10, 10]} intensity={1} />
+      
+      <EarthWithMarkers onLocationClick={onLocationClick} />
       
       <OrbitControls
         enableZoom={true}

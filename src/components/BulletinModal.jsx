@@ -6,35 +6,45 @@ export default function BulletinModal({ location, onClose }) {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="bulletin-modal" onClick={(e) => e.stopPropagation()}>
+      <div className="bulletin-modal modern" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
-          <h2>{location.name}</h2>
-          <div className="location-info">
-            <span className="context">{location.context}</span>
-            <span className="country">{location.country}</span>
+          <div className="location-header">
+            <div className="title-row">
+              <h2>{location.name}</h2>
+              {location.year && <span className="year-badge">{location.year}</span>}
+            </div>
+            <div className="location-meta">
+              <span className="context">{location.context}</span>
+              <span className="country">{location.country}</span>
+            </div>
           </div>
           <button className="close-button" onClick={onClose}>×</button>
         </div>
         
-        <div className="bulletin-board">
-          <div className="cork-background">
+        {location.image && (
+          <img 
+            src={location.image} 
+            alt={location.name}
+            style={{
+              width: "100%",
+              maxHeight: "300px",
+              objectFit: "cover",
+              borderRadius: "12px",
+              marginBottom: "20px"
+            }}
+          />
+        )}
+        
+        <div className="bulletin-content">
+          <h3 className="content-title">Local Bulletin Board</h3>
+          <div className="bulletin-items">
             {location.bulletinBoard.items.map((item, index) => (
-              <div
-                key={item.id}
-                className={`bulletin-item ${item.type}`}
-                style={{
-                  transform: `rotate(${item.style.rotation}deg)`,
-                  backgroundColor: item.style.color,
-                  left: `${15 + (index % 3) * 30}%`,
-                  top: `${20 + Math.floor(index / 3) * 35}%`
-                }}
-              >
-                <div className="thumbtack"></div>
-                <div className="item-content">
-                  <h3 className="item-title">{item.title}</h3>
-                  <p className="item-text">{item.content}</p>
+              <div key={item.id} className="bulletin-item-modern">
+                <div className="item-header">
+                  <h4 className="item-title">{item.title}</h4>
+                  <span className="item-type">{item.type}</span>
                 </div>
-                <div className="tape"></div>
+                <p className="item-content">{item.content}</p>
               </div>
             ))}
           </div>
