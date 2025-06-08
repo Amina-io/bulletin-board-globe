@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, Suspense } from 'react';
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { OrbitControls, Html } from '@react-three/drei';
 import { TextureLoader } from 'three';
@@ -16,6 +16,15 @@ function latLngToVector3(lat, lng, radius = 2.05) {
   const y = radius * Math.cos(phi);
   
   return new THREE.Vector3(x, y, z);
+}
+
+// Loading component
+function Loading() {
+  return (
+    <div className="loading">
+      📌 Loading bulletin boards from around the world...
+    </div>
+  );
 }
 
 // Earth and Markers combined component
@@ -68,7 +77,9 @@ export default function Globe({ onLocationClick }) {
       <ambientLight intensity={0.4} />
       <pointLight position={[10, 10, 10]} intensity={1} />
       
-      <EarthWithMarkers onLocationClick={onLocationClick} />
+      <Suspense fallback={<Loading />}>
+        <EarthWithMarkers onLocationClick={onLocationClick} />
+      </Suspense>
       
       <OrbitControls
         enableZoom={true}

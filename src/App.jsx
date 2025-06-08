@@ -21,8 +21,9 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Global Bulletin Board Explorer</h1>
-        <p>Click on markers to explore local bulletin boards from around the world</p>
+        <h1>✨~bulletin boards of the world!!!~✨</h1>
+        <p>Click on markers to explore local bulletin boards from around the world! 
+          Submit your own board here!</p>
       </header>
       
       <Menu />

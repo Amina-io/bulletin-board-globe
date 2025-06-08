@@ -9,9 +9,9 @@ export default function Menu() {
       id: 'what',
       title: 'WHAT IS THIS?',
       icon: '⭐',
-      content: `Information boards in cafés, universities, and community centers are filled with handwritten notes, local announcements, and personal ads. They're a global human phenomenon and an analog method of widely and easily exchanging information.
+      content: `Bulletin boards in cafés, universities, and community centers are filled with handwritten notes, local announcements, and personal ads. They're a global human phenomenon and an analog method of widely and easily exchanging bulletin.
 
-I've always loved information boards and started this so we could gather a collection of information boards in cyberspace. hopefully we'll realize that we're all not so different!`
+I've always loved bulletin boards and started this so we could gather a collection of bulletin boards in cyberspace. hopefully we'll realize that we're all not so different!`
     },
     {
       id: 'submit',
