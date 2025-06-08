@@ -338,5 +338,176 @@ export const locations = [
         }
       ]
     }
+  },
+  {
+    id: "kaluga1",
+    name: "Graffiti Stairwell in Kaluga",
+    country: "Russia",
+    coordinates: { lat: 54.5293, lng: 36.2754 },
+    context: "Apartment stairwell wall",
+    year: "2020s",
+    image: "/images/bboard17.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "graffiti",
+          title: "Love Saves the World",
+          content: "Graffiti: 'Love saves the world' and other romantic phrases in Russian.",
+          style: { rotation: 2, color: "#ffe4b5" }
+        },
+        {
+          id: "item2",
+          type: "poetry",
+          title: "Rewrite Your Story",
+          content: "Flyer: 'Every morning is a chance to rewrite your story.'",
+          style: { rotation: -1, color: "#f5f5f5" }
+        },
+        {
+          id: "item3",
+          type: "event",
+          title: "Kaluga Gathering",
+          content: "Handwritten call to action, mentions city name Kaluga in bright marker.",
+          style: { rotation: 1, color: "#fafad2" }
+        }
+      ]
+    }
+  },
+  {
+    id: "volgograd1",
+    name: "Apartment Entryway Board in Volgograd",
+    country: "Russia",
+    coordinates: { lat: 48.708, lng: 44.5133 },
+    context: "Apartment entrance recess",
+    year: "2020s",
+    image: "/images/bboard18.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "sale",
+          title: "Buying All Vehicles",
+          content: "We buy any vehicle — any condition. Yellow flyer with phone number.",
+          style: { rotation: -2, color: "#ffffe0" }
+        },
+        {
+          id: "item2",
+          type: "notice",
+          title: "Pink Flyer Notice",
+          content: "Bright pink announcement among faded layers.",
+          style: { rotation: 2, color: "#ffc0cb" }
+        },
+        {
+          id: "item3",
+          type: "market",
+          title: "Local Buy/Sell Offers",
+          content: "Cluster of small, generic sell/buy tear-off ads.",
+          style: { rotation: 1, color: "#faf0e6" }
+        }
+      ]
+    }
+  },
+  {
+    id: "daegu1",
+    name: "Evangelion Street Flyer in Daegu",
+    country: "South Korea",
+    coordinates: { lat: 35.8714, lng: 128.6014 },
+    context: "Street pole urban ad",
+    year: "2020s",
+    image: "/images/bboard19.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "satire",
+          title: "Evangelion Exists!",
+          content: "Bold parody flyer with anime art, quoting apocalyptic themes.",
+          style: { rotation: -1, color: "#ffebcd" }
+        },
+        {
+          id: "item2",
+          type: "tear-off",
+          title: "Work/Trade Offers",
+          content: "Tear-off slips with Korean contact numbers and job categories.",
+          style: { rotation: 1, color: "#fffacd" }
+        },
+        {
+          id: "item3",
+          type: "urban",
+          title: "Summer Revelation Campaign",
+          content: "Absurd copy about summer salvation and joining a cause.",
+          style: { rotation: 2, color: "#e6e6fa" }
+        }
+      ]
+    }
+  },
+  {
+    id: "nashville1",
+    name: "Parnassus Bookstore Events Board",
+    country: "USA",
+    coordinates: { lat: 36.1627, lng: -86.7816 },
+    context: "Indie bookstore",
+    year: "2010s",
+    image: "/images/bboard20.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "reading",
+          title: "October Storytime",
+          content: "Schedule of children’s book readings and music sessions.",
+          style: { rotation: 2, color: "#ffe4e1" }
+        },
+        {
+          id: "item2",
+          type: "book-club",
+          title: "Parnassus Book Club",
+          content: "Monthly discussions of fiction and nonfiction titles.",
+          style: { rotation: -2, color: "#fafad2" }
+        },
+        {
+          id: "item3",
+          type: "flyer",
+          title: "Local Literary Posters",
+          content: "Notices for porch readings, open mic nights, and guest authors.",
+          style: { rotation: 1, color: "#f0fff0" }
+        }
+      ]
+    }
+  },
+  {
+    id: "chicago1",
+    name: "Queer Bookstore Community Board",
+    country: "USA",
+    coordinates: { lat: 41.8781, lng: -87.6298 },
+    context: "Queer-friendly neighborhood bookstore",
+    year: "2010s",
+    image: "/images/bboard21.jpg",
+    bulletinBoard: {
+      items: [
+        {
+          id: "item1",
+          type: "social",
+          title: "Sexuality is a Universe",
+          content: "Poster encouraging open discussion of identity and pleasure.",
+          style: { rotation: -1, color: "#e0ffff" }
+        },
+        {
+          id: "item2",
+          type: "event",
+          title: "Comedy & Zines",
+          content: "Flyers for queer open mics, print fairs, and film screenings.",
+          style: { rotation: 2, color: "#fafad2" }
+        },
+        {
+          id: "item3",
+          type: "music",
+          title: "Gary Numan Tour Poster",
+          content: "Classic album tour announcement, surrounded by zines.",
+          style: { rotation: -2, color: "#ffe4e1" }
+        }
+      ]
+    }
   }
+  
 ]
